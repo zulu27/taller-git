@@ -1,7 +1,13 @@
+def multiplication(num_1, num_2):
+  result = num_1 * num_2
+  print(f'{num_1} / {num_2} is equal to {result}')
+  return result
+
 def resta(num_1, num_2):
   result = num_1 - num_2
-  print(f'{num_1 + {num_2} is equal to {result}')
+  print(f'{num_1} + {num_2} is equal to {result}')
   return result
+  
 def add(num_1, num_2):
   result = num_1 + num_2
   print(f'{num_1} + {num_2} is equal to {result}')
@@ -12,7 +18,8 @@ def game():
   while True:
     print('======== Menu ========'
     '\n1. Add'
-    '\n2. Subtract'  
+    '\n2. Subtract'
+    '\n3. Multiplication'
     '\n0. Exit')
     
     
@@ -36,6 +43,14 @@ def game():
           print('Correct!!')
         else:
           print('Incorrect')
+
+    if option == "3":
+      result = multiplication(num_1, num_2)
+      if answer == result:
+        score += 2
+        print("Correct!!")
+      else:
+        print("Incorrect")
 
   print(f'======== Game Over ========'
   f'\nYou score is {score}'
