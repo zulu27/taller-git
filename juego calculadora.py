@@ -13,7 +13,10 @@ def game():
   while True:
     print('======== Menu ========'
     '\n1. Add'
+    '\'n2. Subtract
     '\n0. Exit')
+    
+    
     option = input('\nChoice an option: ')
     if option == "0":
       break
@@ -27,6 +30,14 @@ def game():
           print('Correct!!')
         else:
           print('Incorrect')
+
+  if option == "2":
+    result = resta(num_1,num_2)
+    if result == answer:
+      score += 1
+      print("Correct!!")
+    else:
+      print("Incorect")
 
   print(f'======== Game Over ========'
   f'\nYou score is {score}'
