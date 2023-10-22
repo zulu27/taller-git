@@ -1,3 +1,8 @@
+def potencia(num_1, num_2):
+  result = num_1 ** num_2
+  print(f'{num_1} ^ {num_2} is equal to {result}')
+  return result
+  
 def division(num_1, num_2):
   result = num_1 / num_2
   print(f'{num_1} / {num_2} is equal to {result}')
@@ -26,6 +31,7 @@ def game():
     '\n2. Subtract'
     '\n3. Multiplication'
     '\n4. Division'
+    '\n5. Power'
     '\n0. Exit')
     
     
@@ -65,7 +71,16 @@ def game():
         print("Correct!!")
       else:
         print("Incorrect")
+        
+    if option == "5":
+      result = potencia(num_1, num_2)
+      if answer == result:
+        score += 4
+        print("Correct!!")
+      else:
+        print("Incorrect")
 
+  
   print(f'======== Game Over ========'
   f'\nYou score is {score}'
   '\nKeep going!')
