@@ -1,11 +1,16 @@
+def division(num_1, num_2):
+  result = num_1 / num_2
+  print(f'{num_1} / {num_2} is equal to {result}')
+  return result
+
 def multiplication(num_1, num_2):
   result = num_1 * num_2
-  print(f'{num_1} / {num_2} is equal to {result}')
+  print(f'{num_1} * {num_2} is equal to {result}')
   return result
 
 def resta(num_1, num_2):
   result = num_1 - num_2
-  print(f'{num_1} + {num_2} is equal to {result}')
+  print(f'{num_1} - {num_2} is equal to {result}')
   return result
   
 def add(num_1, num_2):
@@ -20,6 +25,7 @@ def game():
     '\n1. Add'
     '\n2. Subtract'
     '\n3. Multiplication'
+    '\n4. Division'
     '\n0. Exit')
     
     
@@ -52,8 +58,17 @@ def game():
       else:
         print("Incorrect")
 
+    if option == "4":
+      result = division(num_1, num_2)
+      if answer == result:
+        score += 2
+        print("Correct!!")
+      else:
+        print("Incorrect")
+
   print(f'======== Game Over ========'
   f'\nYou score is {score}'
   '\nKeep going!')
 
+game()
 
